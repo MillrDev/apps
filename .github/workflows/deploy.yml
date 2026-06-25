@@ -1,9 +1,13 @@
 name: Deploy to GitHub Pages
 
+# allow the workflow token to write repository contents (needed to push gh-pages)
+permissions:
+    contents: write
+    pages: write
+
 on:
     push:
         branches: [master]
-
     workflow_dispatch:
 
 jobs:
