@@ -8,19 +8,36 @@ export default {
       username: "",
       usernameInput: "",
       pumps: [],
+      topPumps: [],
     };
   },
 
   methods: {
     async addPump() {
       const { data, error } = await supabase
+        .from("has_had_pump_today")
+        .select("*");
+
+      const set = new Set(
+        data.map((pump) => {
+          return pump.username;
+        }),
+      );
+      console.log(set);
+
+      if (set.has(this.username)) {
+        alert("You have already had your pump today!");
+        return;
+      }
+
+      const { data1, error1 } = await supabase
         .from("pumps")
         .insert({ username: this.username, timestamp: new Date() })
         .select()
         .single();
 
-      if (error) {
-        console.error("Error adding pump:", error);
+      if (error1) {
+        console.error("Error adding pump:", error1);
         return;
       }
 
@@ -58,6 +75,17 @@ export default {
         timestamp: new Date(pump.timestamp),
       }));
     },
+
+    async loadTopPumps() {
+      const { data, error } = await supabase
+        .from("pump_leaderboard")
+        .select("*");
+
+      this.topPumps = data.map((pump) => ({
+        username: pump.username,
+        count: pump.count,
+      }));
+    },
   },
 
   mounted() {
@@ -69,6 +97,7 @@ export default {
     }
 
     this.loadPumps();
+    this.loadTopPumps();
 
     document.title = "Pump Rock | millrdev";
     const link =
@@ -101,12 +130,23 @@ export default {
     <button @click="addPump">Add pump to {{ username }}</button>
   </section>
   <article>
-    <h2 style="font-weight: bold">Pump Timeline</h2>
-    <ul>
-      <li v-for="pump in pumps" :key="pump.id">
-        {{ pump.username }} has had a pump at
-        {{ new Date(pump.timestamp).toLocaleString() }}
-      </li>
-    </ul>
+    <section>
+      <h2 style="font-weight: bold">Top 10 Pump-Rockers</h2>
+      <ul>
+        <li v-for="(pumpRocker, index) in topPumps" :key="pumpRocker.username">
+          #{{ index + 1 }}. {{ pumpRocker.username }} with
+          {{ pumpRocker.count }} pumps
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2 style="font-weight: bold">Pump Timeline</h2>
+      <ul>
+        <li v-for="pump in pumps" :key="pump.id">
+          {{ pump.username }} has had a pump at
+          {{ new Date(pump.timestamp).toLocaleString() }}
+        </li>
+      </ul>
+    </section>
   </article>
 </template>
