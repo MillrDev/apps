@@ -90,6 +90,10 @@ p {
   font-family: "JetBrains Mono", sans-serif;
 }
 
+ul {
+  list-style-type: none;
+}
+
 code,
 .counter {
   font-family: var(--mono);
