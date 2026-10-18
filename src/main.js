@@ -5,45 +5,53 @@ import "./style.css";
 import Home from "./components/pages/Home.vue";
 import Pump from "./components/pages/Pump.vue";
 import MySpace from "./components/pages/MySpace.vue";
+import pumpIcon from "./assets/pump/pump-favicon.svg";
+import myspaceIcon from "./assets/myspace/myspace-favicon.png";
 
 const router = createRouter({
   history: createWebHashHistory("/apps/"),
 
   routes: [
-    { path: "/", component: Home, meta: { title: "Apps" } },
+    {
+      path: "/",
+      component: Home,
+      meta: { title: "Apps", icon: "/favicon.svg" },
+    },
     {
       path: "/pump-rock",
       component: Pump,
-      meta: { title: "Pump Rock", icon: "assets/pump/pump-favicon.svg" },
+      meta: { title: "Pump Rock", icon: pumpIcon },
     },
     {
       path: "/myspace",
       component: MySpace,
       meta: {
         title: "Vincent's MySpace",
-        icon: "assets/myspace/myspace-favicon.png",
+        icon: myspaceIcon,
       },
     },
   ],
 });
 
-const icon = document.querySelector("link[rel='icon']");
-const defaultIcon = {
-  href: icon?.getAttribute("href"),
-  type: icon?.getAttribute("type"),
-};
+function setIcon(href) {
+  document.querySelectorAll("link[rel*='icon']").forEach((l) => l.remove());
+
+  if (href) {
+    const link = document.createElement("link");
+    link.rel = "icon";
+    if (href.endsWith(".svg")) {
+      link.type = "image/svg+xml";
+    } else if (href.endsWith(".png")) {
+      link.type = "image/png";
+    }
+    link.href = href;
+    document.head.appendChild(link);
+  }
+}
 
 router.afterEach((to) => {
   document.title = to.meta.title || "Apps";
-  if (!icon) return;
-
-  if (to.meta.icon) {
-    icon.removeAttribute("type");
-    icon.href = import.meta.env.BASE_URL + to.meta.icon;
-  } else {
-    icon.href = defaultIcon.href;
-    if (defaultIcon.type) icon.type = defaultIcon.type;
-  }
+  setIcon(to.meta.icon);
 });
 
 createApp(App).use(router).mount("#app");
