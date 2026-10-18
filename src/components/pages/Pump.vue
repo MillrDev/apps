@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import { supabase } from "./../src/supabase.js";
+import { supabase } from "../supabase.js";
 
 export default {
   data() {

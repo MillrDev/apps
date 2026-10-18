@@ -2,8 +2,8 @@ import { createApp } from "vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 import "./style.css";
 import App from "./App.vue";
-import Home from "./../pages/Home.vue";
-import Pump from "./../pages/Pump.vue";
+import Home from "./components/pages/Home.vue";
+import Pump from "./components/pages/Pump.vue";
 
 const router = createRouter({
   history: createWebHashHistory("/apps/"),
