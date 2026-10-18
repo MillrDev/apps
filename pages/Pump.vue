@@ -1,3 +1,52 @@
+<template>
+  <header>
+    <div>
+      <h1>Welcome to {{ app_name }}</h1>
+      <h2 style="font-style: italic">Who can rock the most pumps?</h2>
+    </div>
+    <section>
+      <h3>Username: {{ username || "Not set" }}</h3>
+    </section>
+    <section>
+      <input type="text" placeholder="Enter username" v-model="usernameInput" />
+      <button :disabled="!usernameInput" @click="setUsername(usernameInput)">
+        Set username
+      </button>
+    </section>
+  </header>
+  <section v-if="username">
+    <button @click="addPump">Add pump to {{ username }}</button>
+  </section>
+  <article>
+    <section>
+      <h2 style="font-weight: bold">Top 10 Pump-Rockers</h2>
+      <ul>
+        <li v-for="(pumpRocker, index) in topPumps" :key="pumpRocker.username">
+          {{
+            index === 0
+              ? "🥇"
+              : index === 1
+                ? "🥈"
+                : index === 2
+                  ? "🥉"
+                  : "#" + (index + 1) + "."
+          }}
+          {{ pumpRocker.username }} with {{ pumpRocker.count }} pumps
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2 style="font-weight: bold">Pump Timeline</h2>
+      <ul>
+        <li v-for="pump in pumps" :key="pump.id">
+          {{ pump.username }} has had a pump at
+          {{ new Date(pump.timestamp).toLocaleString() }}
+        </li>
+      </ul>
+    </section>
+  </article>
+</template>
+
 <script>
 import { supabase } from "./../src/supabase.js";
 
@@ -111,52 +160,3 @@ export default {
   },
 };
 </script>
-
-<template>
-  <header>
-    <div>
-      <h1>Welcome to {{ app_name }}</h1>
-      <h2 style="font-style: italic">Who can rock the most pumps?</h2>
-    </div>
-    <section>
-      <h3>Username: {{ username || "Not set" }}</h3>
-    </section>
-    <section>
-      <input type="text" placeholder="Enter username" v-model="usernameInput" />
-      <button :disabled="!usernameInput" @click="setUsername(usernameInput)">
-        Set username
-      </button>
-    </section>
-  </header>
-  <section v-if="username">
-    <button @click="addPump">Add pump to {{ username }}</button>
-  </section>
-  <article>
-    <section>
-      <h2 style="font-weight: bold">Top 10 Pump-Rockers</h2>
-      <ul>
-        <li v-for="(pumpRocker, index) in topPumps" :key="pumpRocker.username">
-          {{
-            index === 0
-              ? "🥇"
-              : index === 1
-                ? "🥈"
-                : index === 2
-                  ? "🥉"
-                  : "#" + (index + 1) + "."
-          }}
-          {{ pumpRocker.username }} with {{ pumpRocker.count }} pumps
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2 style="font-weight: bold">Pump Timeline</h2>
-      <ul>
-        <li v-for="pump in pumps" :key="pump.id">
-          {{ pump.username }} has had a pump at
-          {{ new Date(pump.timestamp).toLocaleString() }}
-        </li>
-      </ul>
-    </section>
-  </article>
-</template>

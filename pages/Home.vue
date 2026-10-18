@@ -1,3 +1,15 @@
+<template>
+  <main>
+    <h1 class="mono">apps</h1>
+    <button>
+      <RouterLink to="/pump-rock">Pump Rock</RouterLink>
+    </button>
+    <button>
+      <RouterLink to="/myspace">MySpace</RouterLink>
+    </button>
+  </main>
+</template>
+
 <script>
 export default {
   name: "Home",
@@ -13,12 +25,3 @@ export default {
   },
 };
 </script>
-
-<template>
-  <main>
-    <h1 class="mono">apps</h1>
-    <button>
-      <RouterLink to="/pump-rock">Pump Rock</RouterLink>
-    </button>
-  </main>
-</template>
