@@ -149,14 +149,6 @@ export default {
 
     this.loadPumps();
     this.loadTopPumps();
-
-    document.title = "Pump Rock | millrdev";
-    const link =
-      document.querySelector("link[rel='icon']") ||
-      document.createElement("link");
-    link.rel = "icon";
-    link.href = "/apps/pump-favicon.svg";
-    document.head.appendChild(link);
   },
 };
 </script>

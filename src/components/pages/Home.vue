@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div class="theme">
     <h1 class="mono">apps</h1>
     <button>
       <RouterLink to="/pump-rock">Pump Rock</RouterLink>
@@ -7,7 +7,7 @@
     <button>
       <RouterLink to="/myspace">MySpace</RouterLink>
     </button>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -25,3 +25,5 @@ export default {
   },
 };
 </script>
+
+<style scoped src="../../assets/home/home-style.css"></style>
