@@ -1,7 +1,12 @@
 <template>
   <div class="xp-theme">
     <header class="header">
-      <h1>MySpace.com</h1>
+      <div class="logo-container">
+        <div class="logo">
+          <h1>myspace.com</h1>
+          <h2>a place for friends</h2>
+        </div>
+      </div>
 
       <div>
         <label for="2">MySpace</label>
