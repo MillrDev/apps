@@ -60,7 +60,7 @@
                 Denmark, Copenhagen <br>
                 Amager
               </p>
-            <div >Online Now!</div>
+            <div class="online-status">Online Now!</div>
             </p>
           </div>
         </div>
