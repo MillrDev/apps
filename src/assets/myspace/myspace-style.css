@@ -13,6 +13,12 @@
   --bubble-me-border: #94b6e2;
 }
 
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 *,
 *::before,
 *::after {
@@ -676,18 +682,6 @@ hr {
   box-shadow: inset 0 0 0 1px #8aa8e8;
 }
 
-.logo-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.logo {
-  display: flex;
-  flex-direction: row;
-  gap: 2px;
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -782,4 +776,28 @@ hr {
     box-shadow: none;
     page-break-inside: avoid;
   }
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.logo h1 {
+  font-style: normal;
+}
+
+.logo h3 {
+  color: white;
+}
+
+.divider {
+  flex-grow: 1;
 }

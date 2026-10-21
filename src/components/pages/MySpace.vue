@@ -1,15 +1,22 @@
 <template>
   <div class="xp-theme">
     <header class="header">
-      <div class="logo-container">
+      <div class="logo-container prevent-select">
+        <img
+          src="/src/assets/myspace/myspace-favicon.png"
+          alt="MySpace Logo"
+          style="width: 45px; height: 45px"
+        />
         <div class="logo">
           <h1>myspace.com</h1>
-          <h2>a place for friends</h2>
+          <h3>a place for friends</h3>
         </div>
       </div>
 
+      <div class="divider"></div>
+
       <div>
-        <label for="2">MySpace</label>
+        <label for="2" class="prevent-select">MySpace</label>
         <input
           type="radio"
           name="search"
@@ -20,7 +27,7 @@
       </div>
 
       <div>
-        <label for="1">The Web</label>
+        <label for="1" class="prevent-select">The Web</label>
         <input
           type="radio"
           name="search"
@@ -36,7 +43,7 @@
 
       <div style="display: flex; width: 30px"></div>
 
-      Sign Up
+      <div class="prevent-select">Sign Up</div>
     </header>
 
     <div ref="root">
