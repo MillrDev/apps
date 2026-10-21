@@ -1,6 +1,8 @@
 .root {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr;
   background-image: url("/src/assets/myspace/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -808,6 +810,49 @@ hr {
 
 .logo h3 {
   color: white;
+}
+
+.profile-container {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  background: color-mix(in srgb, var(--sky-bottom) 50%, transparent);
+  border-radius: 3px;
+  box-shadow: 2px 3px 9px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+  padding: 15px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info h1 {
+  flex: 1;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  font: bold 26px var(--xp-font);
+  letter-spacing: -1px;
+  font-family: var(--xp-font);
+  margin: 0 0 0.4em;
+}
+
+.pfp-info {
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+}
+
+.pfp-info img {
+  width: 50%;
+  object-fit: contain;
+  display: block;
+}
+
+.online-status {
+  color: green;
+  font-weight: bold;
 }
 
 .divider {

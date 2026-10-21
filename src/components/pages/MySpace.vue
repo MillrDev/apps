@@ -47,7 +47,26 @@
     </header>
 
     <div ref="root" class="root">
-      <!-- ============ Window 1: chat ============ -->
+      <!-- ============ Window: pfp ============ -->
+      <div class="profile-container">
+        <div class="profile-info">
+          <h1>Vincent Molenaar</h1>
+          <div class="pfp-info">
+            <img src="/src/assets/myspace/pfp.jpeg" alt="Profile Picture" />
+            <p>
+              <h2>Male</h2>
+              <h2>23 years old</h2>
+              <p>
+                Denmark, Copenhagen <br>
+                Amager
+              </p>
+            <div >Online Now!</div>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ Window: chat ============ -->
       <div class="xp-window msn-blue" ref="chat">
         <div class="xp-titlebar">
           <span class="xp-title">Chat - Oliver Flinck (Rexiie)</span>
@@ -74,7 +93,9 @@
                   ><span
                     ><span class="name" style="color: #1a1a8c"
                       >xX_shtaro_Xx</span
-                    ><span class="status">:)</span></span
+                    ><span class="status"
+                      >listen to my beat :) beat.mp3</span
+                    ></span
                   >
                 </li>
                 <li>
@@ -169,7 +190,7 @@
         </div>
       </div>
 
-      <!-- ============ Window 2: controls ============ -->
+      <!-- ============ Window: controls ============ -->
       <div class="xp-window">
         <div class="xp-titlebar">
           <span class="xp-title">Form controls</span>
