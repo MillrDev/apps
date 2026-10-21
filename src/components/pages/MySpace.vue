@@ -73,7 +73,7 @@
                   <span class="avatar">A</span
                   ><span
                     ><span class="name" style="color: #1a1a8c"
-                      >*~*cool_coder*~*</span
+                      >xX_shtaro_Xx</span
                     ><span class="status">:)</span></span
                   >
                 </li>
@@ -98,7 +98,8 @@
                     "
                     >G</span
                   ><span
-                    ><span class="name" style="color: #2a7a1a">game_night</span
+                    ><span class="name" style="color: #2a7a1a"
+                      >Peter (Shonix)</span
                     ><span class="status">who's in? ;)</span></span
                   >
                 </li>
@@ -110,7 +111,7 @@
                     "
                     >F</span
                   ><span
-                    ><span class="name" style="color: #c26a00">friday_bar</span
+                    ><span class="name" style="color: #c26a00">gert</span
                     ><span class="status">&lt;3</span></span
                   >
                 </li>
