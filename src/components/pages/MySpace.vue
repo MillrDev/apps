@@ -46,11 +46,11 @@
       <div class="prevent-select">Sign Up</div>
     </header>
 
-    <div ref="root">
+    <div ref="root" class="root">
       <!-- ============ Window 1: chat ============ -->
       <div class="xp-window msn-blue" ref="chat">
         <div class="xp-titlebar">
-          <span class="xp-title">Chat - Alex :D</span>
+          <span class="xp-title">Chat - Oliver Flink (Rexiie)</span>
           <div class="xp-controls">
             <button class="min" aria-label="Minimize"></button>
             <button class="max" aria-label="Maximize"></button>

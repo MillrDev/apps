@@ -26,7 +26,7 @@ const router = createRouter({
       path: "/myspace",
       component: MySpace,
       meta: {
-        title: "Vincent's MySpace",
+        title: "MySpace.com - Vincent's Profile",
         icon: myspaceIcon,
       },
     },

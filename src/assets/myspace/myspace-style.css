@@ -1,3 +1,12 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  background-image: url("/src/assets/myspace/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
 .xp-theme {
   --xp-font: Tahoma, "Segoe UI", Verdana, sans-serif;
   --xp-beige: #ece9d8;
@@ -36,14 +45,7 @@
   min-height: 100vh;
   font: 12px/1.5 var(--xp-font);
   color: #000;
-  background: linear-gradient(
-    to bottom,
-    #1f5fc8 0%,
-    #5aa0ec 36%,
-    #a9d4fb 54%,
-    #6fb43a 55%,
-    #3f8a1c 100%
-  );
+  background: transparent;
 }
 
 a {
@@ -71,7 +73,7 @@ h3 {
 /* ---------- Window ---------- */
 .xp-window {
   max-width: 720px;
-  margin: 0 auto 22px;
+  margin: 10px;
   background: var(--xp-beige);
   border: 3px solid #0831d9;
   border-top: 0;
@@ -781,6 +783,7 @@ hr {
 .logo-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 2px;
 }
 
