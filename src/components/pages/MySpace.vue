@@ -50,7 +50,7 @@
       <!-- ============ Window 1: chat ============ -->
       <div class="xp-window msn-blue" ref="chat">
         <div class="xp-titlebar">
-          <span class="xp-title">Chat - Oliver Flink (Rexiie)</span>
+          <span class="xp-title">Chat - Oliver Flinck (Rexiie)</span>
           <div class="xp-controls">
             <button class="min" aria-label="Minimize"></button>
             <button class="max" aria-label="Maximize"></button>
@@ -123,7 +123,7 @@
                     alt="Now Playing"
                 /></span>
                 <span
-                  >Oliver Flink (Rexiie) is listening to:<br /><b
+                  >Oliver Flinck (Rexiie) is listening to:<br /><b
                     >Blow Out the Candle - After</b
                   ></span
                 >
@@ -138,7 +138,7 @@
                     ><img src="/src/assets/myspace/olli.png" alt="Avatar"
                   /></span>
                   <span
-                    ><span class="who">Oliver Flink (Rexiie)</span><br /><span
+                    ><span class="who">Oliver Flinck (Rexiie)</span><br /><span
                       class="msg"
                       >(Away) - I love music! &lt;3</span
                     ></span
