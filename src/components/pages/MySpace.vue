@@ -58,10 +58,10 @@
           </div>
         </div>
         <div class="xp-banner">
-          <h1>my page</h1>
-          <span class="tool">Contacts</span>
-          <span class="tool">Nudge</span>
-          <span class="tool">Help</span>
+          <h1 class="prevent-select">chats</h1>
+          <span class="tool prevent-select">Contacts</span>
+          <span class="tool prevent-select">Nudge</span>
+          <span class="tool prevent-select">Help</span>
         </div>
 
         <div class="xp-body">
@@ -117,9 +117,15 @@
               </ul>
               <br />
               <div class="nowplaying">
-                <span class="cover"></span>
+                <span class="cover"
+                  ><img
+                    src="/src/assets/myspace/after-cover.png"
+                    alt="Now Playing"
+                /></span>
                 <span
-                  >Alex :D is listening to:<br /><b>Some Song Title</b></span
+                  >Oliver Flink (Rexiie) is listening to:<br /><b
+                    >Blow Out the Candle - After</b
+                  ></span
                 >
               </div>
             </div>
@@ -128,20 +134,26 @@
             <div>
               <div class="xp-panel">
                 <div class="xp-panel-header">
-                  <span class="avatar lg">A</span>
+                  <span class="avatar lg"
+                    ><img src="/src/assets/myspace/olli.png" alt="Avatar"
+                  /></span>
                   <span
-                    ><span class="who">Alex :D</span><br /><span class="msg"
+                    ><span class="who">Oliver Flink (Rexiie)</span><br /><span
+                      class="msg"
                       >(Away) - I love music! &lt;3</span
                     ></span
                   >
                 </div>
                 <div class="chat">
-                  <div class="bubble them">hey wats up?</div>
-                  <div class="bubble me">not much, hbu? :P</div>
                   <div class="bubble them">
-                    want to join our coding night? :D
+                    heya, did you apply for Tietgen yet?
                   </div>
-                  <div class="bubble me">omg yes ;)</div>
+                  <div class="bubble me">working on it as we speak! :P</div>
+                  <div class="bubble them">
+                    aws!! wanna join codiing night later? :D
+                  </div>
+                  <div class="bubble them">*coding... epic fail XD</div>
+                  <div class="bubble me">LOL! omg yes ;)</div>
                   <div class="bubble them">:)</div>
                 </div>
               </div>
