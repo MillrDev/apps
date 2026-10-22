@@ -129,12 +129,13 @@ export default {
   name: "Player",
 
   props: {
-    // [{ title, artist, src }]
     playlist: {
       type: Array,
       required: true,
     },
   },
+
+  emits: ["listening-status"],
 
   data() {
     return {
@@ -143,7 +144,7 @@ export default {
       volume: 70,
       currentTime: 0,
       duration: 0,
-      levels: Array(9).fill(0), // each 0..1, feeds the equalizer bars
+      levels: Array(9).fill(0),
     };
   },
 
@@ -157,7 +158,6 @@ export default {
   },
 
   created() {
-    // Not reactive on purpose: these are plain objects Vue shouldn't proxy.
     this.audio = new Audio();
     this.audio.crossOrigin = "anonymous";
     this.audio.volume = this.volume / 100;
@@ -179,7 +179,6 @@ export default {
   },
 
   beforeUnmount() {
-    // Vue 2: rename this hook to beforeDestroy
     cancelAnimationFrame(this.raf);
     this.audio.pause();
     this.audio.src = "";
@@ -229,9 +228,16 @@ export default {
     setState(state) {
       this.state = state;
       cancelAnimationFrame(this.raf);
-      if (state === "playing") this.tick();
-      else if (state === "stopped") this.levels = Array(9).fill(0);
-      else this.levels = Array(9).fill(0.05);
+      if (state === "playing") {
+        this.tick();
+        this.$emit(
+          "listening-status",
+          `${this.currentTrack.title} - ${this.currentTrack.artist}`,
+        );
+      } else if (state === "stopped") {
+        this.levels = Array(9).fill(0);
+        this.$emit("listening-status", "");
+      } else this.levels = Array(9).fill(0.05);
     },
 
     /* ---------- Equalizer ---------- */
@@ -245,7 +251,7 @@ export default {
 
       this.gain = this.ctx.createGain();
       this.gain.gain.value = this.volume / 100;
-      this.audio.volume = 1; // the gain node handles volume from here on
+      this.audio.volume = 1;
 
       this.ctx.createMediaElementSource(this.audio).connect(this.analyser);
       this.analyser.connect(this.gain);
@@ -260,7 +266,6 @@ export default {
         this.analyser.getByteFrequencyData(this.freqData);
         this.levels = this.levels.map((_, i) => this.freqData[i + 1] / 255);
       } else {
-        // no audio source: fake levels so you can preview the styling
         this.levels = this.levels.map((v) =>
           Math.max(0, Math.min(1, v + (Math.random() - 0.5) * 0.5)),
         );
@@ -290,5 +295,4 @@ export default {
 };
 </script>
 
-<!-- Reuse the same stylesheet from before. Not scoped, so the classes match. -->
 <style src="../../assets/myspace/myspace-style.css"></style>

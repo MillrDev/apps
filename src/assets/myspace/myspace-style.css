@@ -1181,6 +1181,10 @@ hr {
   font-weight: bold;
 }
 
+.listening-status {
+  font-size: medium;
+}
+
 .profile-url {
   display: flex;
   border: 1px solid white;

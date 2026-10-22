@@ -63,6 +63,11 @@
                 Amager
               </p>
               <div class="online-status">Online Now!</div>
+              <br />
+              <br />
+              <div class="listening-status" v-if="listeningStatus">
+                Listening to: <br />{{ listeningStatus }}
+              </div>
             </div>
           </div>
           <div class="profile-url">
@@ -276,7 +281,13 @@
           </div>
         </div>
       </div>
-      <player :playlist="songs"></player>
+
+      <div>box 4</div>
+      <player
+        @listening-status="listeningStatus = $event"
+        :playlist="songs"
+      ></player>
+      <div>box 5</div>
     </div>
   </div>
 </template>
@@ -286,6 +297,7 @@ import "../emoticons.js";
 import Player from "/src/components/myspace/Player.vue";
 
 import freestyler from "../../assets/myspace/freestyler.mp3";
+import after from "../../assets/myspace/after.mp3";
 
 export default {
   name: "MyPage",
@@ -298,11 +310,17 @@ export default {
     return {
       searchField: "",
       searchType: "web",
+      listeningStatus: "",
       songs: [
         {
           title: "Freestyler",
           artist: "Bomfunk MC's",
           src: freestyler,
+        },
+        {
+          title: "300 dreams",
+          artist: "After",
+          src: after,
         },
       ],
     };
