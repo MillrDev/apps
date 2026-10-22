@@ -295,4 +295,4 @@ export default {
 };
 </script>
 
-<style src="../../assets/myspace/myspace-style.css"></style>
+<style scoped src="../../assets/myspace/myspace-style.css"></style>
