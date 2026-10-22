@@ -53,15 +53,102 @@
           <h1>Vincent Molenaar</h1>
           <div class="pfp-info">
             <img src="/src/assets/myspace/pfp.jpeg" alt="Profile Picture" />
-            <p>
+            <div>
+              <div style="font-size: 15px">"Hello, World! :)"</div>
+              <br />
               <h2>Male</h2>
               <h2>23 years old</h2>
               <p>
-                Denmark, Copenhagen <br>
+                Denmark, Copenhagen <br />
                 Amager
               </p>
-            <div class="online-status">Online Now!</div>
+              <div class="online-status">Online Now!</div>
+            </div>
+          </div>
+          <div class="profile-url">
+            MySpace URL:
+            <br />
+            https://millr.dev/apps/#/myspace
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ Window: controls ============ -->
+      <div class="xp-window">
+        <div class="xp-titlebar">
+          <span class="xp-title">Form controls</span>
+          <div class="xp-controls">
+            <button class="min" aria-label="Minimize"></button>
+            <button class="max" aria-label="Maximize"></button>
+            <button class="close" aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="xp-body">
+          <ul class="xp-tabs">
+            <li class="active">About me</li>
+            <li>Top 8</li>
+            <li>Contact</li>
+          </ul>
+          <div class="xp-tabpanel">
+            <fieldset>
+              <legend>Profile</legend>
+              <p>
+                <label
+                  >Name<br /><input
+                    type="text"
+                    size="30"
+                    placeholder="Your name"
+                /></label>
+              </p>
+              <p>
+                <label
+                  >Mood<br />
+                  <select>
+                    <option>Happy :)</option>
+                    <option>Chill</option>
+                    <option>Caffeinated</option>
+                  </select>
+                </label>
+              </p>
+              <p>
+                <label><input type="checkbox" checked /> I like coding</label
+                ><br />
+                <label><input type="checkbox" /> I like early mornings</label>
+              </p>
+              <p>
+                <label><input type="radio" name="r" checked /> Sofa</label>
+                <label><input type="radio" name="r" /> Kitchen</label>
+              </p>
+            </fieldset>
+
+            <p>
+              <button>OK</button>
+              <button>Cancel</button>
+              <button class="xp-btn default">Apply</button>
+              <span class="badge">NEW!</span>
             </p>
+
+            <div class="progress"><span style="width: 65%"></span></div>
+            <br />
+            <table>
+              <tr>
+                <th>#</th>
+                <th>Thing I will bring</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Coding nights</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Waffles on Sundays :D</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Board games 8)</td>
+              </tr>
+            </table>
+            <p>Emoticons: :) :D :P ;) :( :O 8) &lt;3</p>
           </div>
         </div>
       </div>
@@ -189,104 +276,42 @@
           </div>
         </div>
       </div>
-
-      <!-- ============ Window: controls ============ -->
-      <div class="xp-window">
-        <div class="xp-titlebar">
-          <span class="xp-title">Form controls</span>
-          <div class="xp-controls">
-            <button class="min" aria-label="Minimize"></button>
-            <button class="max" aria-label="Maximize"></button>
-            <button class="close" aria-label="Close"></button>
-          </div>
-        </div>
-        <div class="xp-body">
-          <ul class="xp-tabs">
-            <li class="active">About me</li>
-            <li>Top 8</li>
-            <li>Contact</li>
-          </ul>
-          <div class="xp-tabpanel">
-            <fieldset>
-              <legend>Profile</legend>
-              <p>
-                <label
-                  >Name<br /><input
-                    type="text"
-                    size="30"
-                    placeholder="Your name"
-                /></label>
-              </p>
-              <p>
-                <label
-                  >Mood<br />
-                  <select>
-                    <option>Happy :)</option>
-                    <option>Chill</option>
-                    <option>Caffeinated</option>
-                  </select>
-                </label>
-              </p>
-              <p>
-                <label><input type="checkbox" checked /> I like coding</label
-                ><br />
-                <label><input type="checkbox" /> I like early mornings</label>
-              </p>
-              <p>
-                <label><input type="radio" name="r" checked /> Sofa</label>
-                <label><input type="radio" name="r" /> Kitchen</label>
-              </p>
-            </fieldset>
-
-            <p>
-              <button>OK</button>
-              <button>Cancel</button>
-              <button class="xp-btn default">Apply</button>
-              <span class="badge">NEW!</span>
-            </p>
-
-            <div class="progress"><span style="width: 65%"></span></div>
-            <br />
-            <table>
-              <tr>
-                <th>#</th>
-                <th>Thing I will bring</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Coding nights</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Waffles on Sundays :D</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Board games 8)</td>
-              </tr>
-            </table>
-            <p>Emoticons: :) :D :P ;) :( :O 8) &lt;3</p>
-          </div>
-        </div>
-      </div>
+      <player :playlist="songs"></player>
     </div>
   </div>
 </template>
 
 <script>
 import "../emoticons.js";
+import Player from "/src/components/myspace/Player.vue";
+
+import freestyler from "../../assets/myspace/freestyler.mp3";
 
 export default {
   name: "MyPage",
+
+  components: {
+    Player,
+  },
+
   data() {
     return {
       searchField: "",
       searchType: "web",
+      songs: [
+        {
+          title: "Freestyler",
+          artist: "Bomfunk MC's",
+          src: freestyler,
+        },
+      ],
     };
   },
+
   mounted() {
     window.Emoticons.parse(this.$refs.root);
   },
+
   methods: {
     nudge() {
       const w = this.$refs.chat;
