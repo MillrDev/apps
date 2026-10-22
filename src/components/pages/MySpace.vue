@@ -52,7 +52,7 @@
         <div class="profile-info">
           <h1>Vincent Molenaar</h1>
           <div class="pfp-info">
-            <img src="../../assets/myspace/pfp.jpeg" alt="Profile Picture" />
+            <img src="../../assets/myspace/pfp.JPEG" alt="Profile Picture" />
             <div>
               <div style="font-size: 15px">"Hello, World! :)"</div>
               <br />
