@@ -1280,6 +1280,35 @@ hr {
   width: 25px;
 }
 
+.xp-window.slideshow {
+  display: flex;
+  opacity: 1;
+  flex-direction: column;
+}
+.xp-window.slideshow .xp-titlebar {
+  flex: none;
+}
+.xp-window.slideshow .xp-body {
+  flex: 1;
+  min-height: 0;
+  padding: 0;
+  position: relative;
+}
+
+.music-window {
+  display: flex;
+  flex-direction: row;
+}
+
+.music-window h1 {
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  font: bold 26px var(--xp-font);
+  letter-spacing: -1px;
+  font-family: var(--xp-font);
+  margin: 0 0 0.4em;
+}
+
 .divider {
   flex-grow: 1;
 }
