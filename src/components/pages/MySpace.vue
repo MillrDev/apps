@@ -80,6 +80,7 @@
             https://millr.dev/apps/#/myspace
           </div>
 
+          <!-- ============ Window: friend space ============ -->
           <div
             class="xp-window"
             style="margin: 0; border-radius: 3px 3px 3px 3px; border: 0px"
@@ -97,6 +98,86 @@
               </ul>
               <div class="xp-tabpanel">
                 <div class="top-8-grid">
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>xX_shtaro_Xx</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
                   <div class="friend-card">
                     <h2>Oliver Flinck (Rexiie)</h2>
                     <img
