@@ -48,7 +48,7 @@
 
     <div ref="root" class="root">
       <!-- ============ Window: pfp ============ -->
-      <div class="profile-container">
+      <div class="profile-container area-left">
         <div class="profile-info">
           <h1>Vincent Molenaar</h1>
           <div class="pfp-info">
@@ -62,7 +62,10 @@
                 Denmark, Copenhagen <br />
                 Amager
               </p>
-              <div class="online-status">Online Now!</div>
+              <div class="online-status">
+                <img src="../../assets/myspace/online.png" />
+                <div>Online Now!</div>
+              </div>
               <br />
               <br />
               <div class="listening-status" v-if="listeningStatus">
@@ -70,18 +73,133 @@
               </div>
             </div>
           </div>
+
           <div class="profile-url">
             MySpace URL:
             <br />
             https://millr.dev/apps/#/myspace
           </div>
+
+          <!-- ============ Window: friend space ============ -->
+          <div
+            class="xp-window"
+            style="margin: 0; border-radius: 3px 3px 3px 3px; border: 0px"
+          >
+            <div class="xp-body">
+              <div class="friend-space">Vincent Molenaar's Friend Space</div>
+              <br />
+              <div style="font-weight: bold">
+                Vincent Molenaar has
+                <span style="color: red">130</span> Friends.
+              </div>
+              <br />
+              <ul class="xp-tabs">
+                <li class="active">Top 8</li>
+              </ul>
+              <div class="xp-tabpanel">
+                <div class="top-8-grid">
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>xX_shtaro_Xx</h2>
+                    <img
+                      src="../../assets/myspace/shtaro.png"
+                      class="friend-card-pfp"
+                    />
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- ============ Window: controls ============ -->
-      <div class="xp-window">
+      <!-- ============ Window: posts ============ -->
+      <div class="xp-window area-main">
         <div class="xp-titlebar">
-          <span class="xp-title">Form controls</span>
+          <span class="xp-title">Vincent's Blurbs</span>
           <div class="xp-controls">
             <button class="min" aria-label="Minimize"></button>
             <button class="max" aria-label="Maximize"></button>
@@ -158,8 +276,36 @@
         </div>
       </div>
 
+      <!-- ============ Window: Music player ============ -->
+      <div class="music-window">
+        <div class="profile-container">
+          <h1>Some of my favourite songs atm! :D</h1>
+        </div>
+        <player
+          @listening-status="listeningStatus = $event"
+          :playlist="songs"
+          class="area-bottom"
+        ></player>
+      </div>
+
+      <!-- ============ Window: Photo Slidehow ============ -->
+      <div class="xp-window area-topright slideshow">
+        <div class="xp-titlebar">
+          <span class="xp-title"> Photo Slidehow </span>
+          <div class="xp-controls">
+            <button class="min" aria-label="Minimize"></button>
+            <button class="max" aria-label="Maximize"></button>
+            <button class="close" aria-label="Close"></button>
+          </div>
+        </div>
+
+        <div class="xp-body">
+          <slideshow></slideshow>
+        </div>
+      </div>
+
       <!-- ============ Window: chat ============ -->
-      <div class="xp-window msn-blue" ref="chat">
+      <div class="xp-window msn-blue area-bottomright" ref="chat">
         <div class="xp-titlebar">
           <span class="xp-title">Chat - Oliver Flinck (Rexiie)</span>
           <div class="xp-controls">
@@ -281,13 +427,6 @@
           </div>
         </div>
       </div>
-
-      <div>box 4</div>
-      <player
-        @listening-status="listeningStatus = $event"
-        :playlist="songs"
-      ></player>
-      <div>box 5</div>
     </div>
   </div>
 </template>
@@ -295,15 +434,20 @@
 <script>
 import "../emoticons.js";
 import Player from "/src/components/myspace/Player.vue";
-
+import Slideshow from "/src/components/myspace/Slideshow.vue";
 import freestyler from "../../assets/myspace/freestyler.mp3";
 import after from "../../assets/myspace/after.mp3";
+import ripples from "../../assets/myspace/ripples.mp3";
+import script from "../../assets/myspace/script.mp3";
+import todd from "../../assets/myspace/todd.mp3";
+import keane from "../../assets/myspace/keane.mp3";
 
 export default {
   name: "MyPage",
 
   components: {
     Player,
+    Slideshow,
   },
 
   data() {
@@ -321,6 +465,26 @@ export default {
           title: "300 dreams",
           artist: "After",
           src: after,
+        },
+        {
+          title: "Ripples",
+          artist: "beabadoobee",
+          src: ripples,
+        },
+        {
+          title: "Everybody's Changing",
+          artist: "Keane",
+          src: keane,
+        },
+        {
+          title: "The Man Who Can't Be Moved",
+          artist: "The Script",
+          src: script,
+        },
+        {
+          title: "X's & O's",
+          artist: "Malcolm Todd",
+          src: todd,
         },
       ],
     };
