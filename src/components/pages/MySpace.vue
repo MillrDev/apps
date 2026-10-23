@@ -48,7 +48,7 @@
 
     <div ref="root" class="root">
       <!-- ============ Window: pfp ============ -->
-      <div class="profile-container">
+      <div class="profile-container area-left">
         <div class="profile-info">
           <h1>Vincent Molenaar</h1>
           <div class="pfp-info">
@@ -113,7 +113,7 @@
                   <div class="friend-card">
                     <h2>xX_shtaro_Xx</h2>
                     <img
-                      src="../../assets/myspace/olli.png"
+                      src="../../assets/myspace/shtaro.png"
                       class="friend-card-pfp"
                     />
                   </div>
@@ -196,10 +196,10 @@
         </div>
       </div>
 
-      <!-- ============ Window: controls ============ -->
-      <div class="xp-window">
+      <!-- ============ Window: posts ============ -->
+      <div class="xp-window area-main">
         <div class="xp-titlebar">
-          <span class="xp-title">Form controls</span>
+          <span class="xp-title">Vincent's Blurbs</span>
           <div class="xp-controls">
             <button class="min" aria-label="Minimize"></button>
             <button class="max" aria-label="Maximize"></button>
@@ -276,8 +276,27 @@
         </div>
       </div>
 
+      <!-- ============ Window: Music player ============ -->
+      <player
+        @listening-status="listeningStatus = $event"
+        :playlist="songs"
+        class="area-bottom"
+      ></player>
+
+      <!-- ============ Window: Photo Slidehow ============ -->
+      <div class="xp-window area-topright">
+        <div class="xp-titlebar">
+          <span class="xp-title"> Photo Slidehow </span>
+          <div class="xp-controls">
+            <button class="min" aria-label="Minimize"></button>
+            <button class="max" aria-label="Maximize"></button>
+            <button class="close" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+
       <!-- ============ Window: chat ============ -->
-      <div class="xp-window msn-blue" ref="chat">
+      <div class="xp-window msn-blue area-bottomright" ref="chat">
         <div class="xp-titlebar">
           <span class="xp-title">Chat - Oliver Flinck (Rexiie)</span>
           <div class="xp-controls">
@@ -399,13 +418,6 @@
           </div>
         </div>
       </div>
-
-      <div>box 4</div>
-      <player
-        @listening-status="listeningStatus = $event"
-        :playlist="songs"
-      ></player>
-      <div>box 5</div>
     </div>
   </div>
 </template>

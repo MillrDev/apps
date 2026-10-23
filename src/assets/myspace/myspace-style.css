@@ -1,12 +1,36 @@
 .root {
+  flex: 1;
+  min-height: 0;
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 2.5fr 1fr;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1.7fr) auto;
+  grid-template-areas:
+    "left  main   topright"
+    "left  main   bottomright"
+    "left  bottom bottomright";
+  gap: 10px;
+
   background-image: url("/src/assets/myspace/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+}
+
+.area-left {
+  grid-area: left;
+}
+.area-main {
+  grid-area: main;
+}
+.area-bottom {
+  grid-area: bottom;
+}
+.area-topright {
+  grid-area: topright;
+}
+.area-bottomright {
+  grid-area: bottomright;
 }
 
 .xp-theme {
@@ -44,9 +68,12 @@
 /* ---------- Page: generic blue-sky-and-green-hill desktop ---------- */
 .xp-theme {
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   font: 12px/1.5 var(--xp-font);
   color: #000;
+  overflow: hidden;
   background: transparent;
 }
 
@@ -74,7 +101,6 @@ h3 {
 
 /* ---------- Window ---------- */
 .xp-window {
-  max-width: 720px;
   margin: 10px;
   background: var(--xp-beige);
   opacity: 0.9;
@@ -238,7 +264,22 @@ h3 {
   padding: 8px;
 }
 .msn-blue .xp-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
   background: linear-gradient(to bottom, var(--sky-top), var(--sky-bottom));
+  height: 100%;
+}
+
+.xp-window.msn-blue {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.msn-blue .xp-titlebar,
+.msn-blue .xp-banner {
+  flex: none;
 }
 
 .xp-cols {
@@ -268,7 +309,7 @@ h3 {
   background: linear-gradient(to bottom, #fff 0%, #f7d6ea 100%);
 }
 .xp-panel-header .who {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
 }
 .xp-panel-header .msg {
@@ -713,6 +754,10 @@ hr {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
+.header {
+  flex: none;
+}
+
 .header input[type="text"] {
   width: 100%;
   max-width: 200px;
@@ -807,8 +852,8 @@ hr {
   width: 700px;
   max-width: 100%;
   height: fit-content; /* don't stretch to fill a tall parent */
-  align-self: flex-start;
-  justify-self: flex-start;
+  align-self: center;
+  justify-self: center;
   flex: 0 0 auto;
   box-sizing: border-box;
   padding: 14px 16px 12px;
