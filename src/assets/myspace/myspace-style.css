@@ -1175,12 +1175,6 @@ hr {
   display: block;
 }
 
-.online-status {
-  color: green;
-  font-size: 14px;
-  font-weight: bold;
-}
-
 .listening-status {
   font-size: medium;
 }
@@ -1192,6 +1186,52 @@ hr {
   font-size: 14px;
   padding: 5px;
   margin-top: 15px;
+}
+
+.friend-space {
+  display: flex;
+  height: 30px;
+  align-items: center;
+  padding-left: 10px;
+  width: 100%;
+  color: #f84200;
+  background-color: #ffc08a;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.top-8-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.friend-card {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.friend-card-pfp {
+  width: 100%;
+  border: 3px solid blue;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.online-status {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.online-status img {
+  height: 25px;
+  width: 25px;
 }
 
 .divider {

@@ -62,7 +62,10 @@
                 Denmark, Copenhagen <br />
                 Amager
               </p>
-              <div class="online-status">Online Now!</div>
+              <div class="online-status">
+                <img src="../../assets/myspace/online.png" />
+                <div>Online Now!</div>
+              </div>
               <br />
               <br />
               <div class="listening-status" v-if="listeningStatus">
@@ -70,10 +73,44 @@
               </div>
             </div>
           </div>
+
           <div class="profile-url">
             MySpace URL:
             <br />
             https://millr.dev/apps/#/myspace
+          </div>
+
+          <div
+            class="xp-window"
+            style="margin: 0; border-radius: 3px 3px 3px 3px; border: 0px"
+          >
+            <div class="xp-body">
+              <div class="friend-space">Vincent Molenaar's Friend Space</div>
+              <br />
+              <div style="font-weight: bold">
+                Vincent Molenaar has
+                <span style="color: red">130</span> Friends.
+              </div>
+              <br />
+              <ul class="xp-tabs">
+                <li class="active">Top 8</li>
+              </ul>
+              <div class="xp-tabpanel">
+                <div class="top-8-grid">
+                  <div class="friend-card">
+                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <img
+                      src="../../assets/myspace/olli.png"
+                      class="friend-card-pfp"
+                    />
+                    <div class="online-status">
+                      <img src="../../assets/myspace/online.png" />
+                      <div style="font-weight: normal">Online Now!</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
