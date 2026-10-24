@@ -93,13 +93,19 @@
                 <span style="color: red">130</span> Friends.
               </div>
               <br />
-              <ul class="xp-tabs">
-                <li class="active">Top 8</li>
+              <ul class="xp-tabs prevent-select">
+                <li @click="switchTab(0)" :class="{ active: isActive(0) }">
+                  Top 8
+                </li>
+                <li @click="switchTab(1)" :class="{ active: isActive(1) }">
+                  Something
+                </li>
               </ul>
               <div class="xp-tabpanel">
-                <div class="top-8-grid">
+                <!-- =========== top 8 friends tab ========= -->
+                <div class="top-8-grid" v-if="isActive(0)">
                   <div class="friend-card">
-                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <h2>Oliver Flinck</h2>
                     <img
                       src="../../assets/myspace/olli.png"
                       class="friend-card-pfp"
@@ -119,9 +125,9 @@
                   </div>
 
                   <div class="friend-card">
-                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <h2>Benjamin</h2>
                     <img
-                      src="../../assets/myspace/olli.png"
+                      src="../../assets/myspace/benja.png"
                       class="friend-card-pfp"
                     />
                     <div class="online-status">
@@ -131,11 +137,44 @@
                   </div>
 
                   <div class="friend-card">
-                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <h2>Sander_Lahozzz</h2>
+                    <span
+                      class="avatar"
+                      style="
+                        background: linear-gradient(135deg, #0080a3, #1800a3);
+                      "
+                      >S</span
+                    >
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>Peter (Shonix)</h2>
                     <img
-                      src="../../assets/myspace/olli.png"
+                      src="../../assets/myspace/peter.png"
                       class="friend-card-pfp"
                     />
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>gert</h2>
+                    <span
+                      class="avatar"
+                      style="
+                        background: linear-gradient(135deg, #ffc066, #a34d00);
+                      "
+                      >g</span
+                    >
+                  </div>
+
+                  <div class="friend-card">
+                    <h2>kidneymerchant</h2>
+                    <span
+                      class="avatar"
+                      style="
+                        background: linear-gradient(135deg, #f08ac0, #b03a80);
+                      "
+                      >k</span
+                    >
                     <div class="online-status">
                       <img src="../../assets/myspace/online.png" />
                       <div style="font-weight: normal">Online Now!</div>
@@ -143,53 +182,16 @@
                   </div>
 
                   <div class="friend-card">
-                    <h2>Oliver Flinck (Rexiie)</h2>
+                    <h2>Tom</h2>
                     <img
-                      src="../../assets/myspace/olli.png"
+                      src="../../assets/myspace/tom.png"
                       class="friend-card-pfp"
                     />
-                    <div class="online-status">
-                      <img src="../../assets/myspace/online.png" />
-                      <div style="font-weight: normal">Online Now!</div>
-                    </div>
-                  </div>
-
-                  <div class="friend-card">
-                    <h2>Oliver Flinck (Rexiie)</h2>
-                    <img
-                      src="../../assets/myspace/olli.png"
-                      class="friend-card-pfp"
-                    />
-                    <div class="online-status">
-                      <img src="../../assets/myspace/online.png" />
-                      <div style="font-weight: normal">Online Now!</div>
-                    </div>
-                  </div>
-
-                  <div class="friend-card">
-                    <h2>Oliver Flinck (Rexiie)</h2>
-                    <img
-                      src="../../assets/myspace/olli.png"
-                      class="friend-card-pfp"
-                    />
-                    <div class="online-status">
-                      <img src="../../assets/myspace/online.png" />
-                      <div style="font-weight: normal">Online Now!</div>
-                    </div>
-                  </div>
-
-                  <div class="friend-card">
-                    <h2>Oliver Flinck (Rexiie)</h2>
-                    <img
-                      src="../../assets/myspace/olli.png"
-                      class="friend-card-pfp"
-                    />
-                    <div class="online-status">
-                      <img src="../../assets/myspace/online.png" />
-                      <div style="font-weight: normal">Online Now!</div>
-                    </div>
                   </div>
                 </div>
+
+                <!-- =========== bullet points  tab ========= -->
+                <div v-else>hej</div>
               </div>
             </div>
           </div>
@@ -207,72 +209,7 @@
           </div>
         </div>
         <div class="xp-body">
-          <ul class="xp-tabs">
-            <li class="active">About me</li>
-            <li>Top 8</li>
-            <li>Contact</li>
-          </ul>
-          <div class="xp-tabpanel">
-            <fieldset>
-              <legend>Profile</legend>
-              <p>
-                <label
-                  >Name<br /><input
-                    type="text"
-                    size="30"
-                    placeholder="Your name"
-                /></label>
-              </p>
-              <p>
-                <label
-                  >Mood<br />
-                  <select>
-                    <option>Happy :)</option>
-                    <option>Chill</option>
-                    <option>Caffeinated</option>
-                  </select>
-                </label>
-              </p>
-              <p>
-                <label><input type="checkbox" checked /> I like coding</label
-                ><br />
-                <label><input type="checkbox" /> I like early mornings</label>
-              </p>
-              <p>
-                <label><input type="radio" name="r" checked /> Sofa</label>
-                <label><input type="radio" name="r" /> Kitchen</label>
-              </p>
-            </fieldset>
-
-            <p>
-              <button>OK</button>
-              <button>Cancel</button>
-              <button class="xp-btn default">Apply</button>
-              <span class="badge">NEW!</span>
-            </p>
-
-            <div class="progress"><span style="width: 65%"></span></div>
-            <br />
-            <table>
-              <tr>
-                <th>#</th>
-                <th>Thing I will bring</th>
-              </tr>
-              <tr>
-                <td>1</td>
-                <td>Coding nights</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Waffles on Sundays :D</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Board games 8)</td>
-              </tr>
-            </table>
-            <p>Emoticons: :) :D :P ;) :( :O 8) &lt;3</p>
-          </div>
+          <span class="badge">NEW!</span>
         </div>
       </div>
 
@@ -327,7 +264,7 @@
             <div>
               <ul class="contacts">
                 <li>
-                  <span class="avatar">A</span
+                  <span class="avatar">x</span
                   ><span
                     ><span class="name" style="color: #1a1a8c"
                       >xX_shtaro_Xx</span
@@ -355,7 +292,7 @@
                     style="
                       background: linear-gradient(135deg, #7cc934, #38700d);
                     "
-                    >G</span
+                    >P</span
                   ><span
                     ><span class="name" style="color: #2a7a1a"
                       >Peter (Shonix)</span
@@ -368,7 +305,7 @@
                     style="
                       background: linear-gradient(135deg, #ffc066, #a34d00);
                     "
-                    >F</span
+                    >g</span
                   ><span
                     ><span class="name" style="color: #c26a00">gert</span
                     ><span class="status">&lt;3</span></span
@@ -455,6 +392,7 @@ export default {
       searchField: "",
       searchType: "web",
       listeningStatus: "",
+      activeTab: 0,
       songs: [
         {
           title: "Freestyler",
@@ -507,6 +445,12 @@ export default {
       } else {
         window.location.href = "https://myspace.com/";
       }
+    },
+    switchTab(index) {
+      this.activeTab = index;
+    },
+    isActive(index) {
+      return this.activeTab === index;
     },
   },
 };

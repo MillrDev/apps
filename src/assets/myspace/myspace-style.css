@@ -628,6 +628,7 @@ input[type="radio"]:checked {
   padding: 0 4px;
   list-style: none;
   position: relative;
+  cursor: pointer;
   z-index: 1;
   top: 1px;
 }
@@ -672,24 +673,6 @@ td {
 tr:hover td {
   background: #316ac5;
   color: #fff;
-}
-
-/* ---------- Progress (green blocks) ---------- */
-.progress {
-  height: 16px;
-  padding: 2px;
-  background: #fff;
-  border: 1px solid #686868;
-  border-radius: 3px;
-}
-.progress > span {
-  display: block;
-  height: 100%;
-  background: repeating-linear-gradient(
-    to right,
-    #37d628 0 8px,
-    transparent 8px 10px
-  );
 }
 
 /* ---------- Misc ---------- */
@@ -1258,10 +1241,16 @@ hr {
   flex-direction: column;
 }
 
+.friend-card > .avatar {
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+}
+
 .friend-card-pfp {
-  width: 100%;
+  width: 100px;
+  height: 100px;
   border: 3px solid blue;
-  height: 100%;
   object-fit: cover;
   display: block;
 }
