@@ -229,16 +229,45 @@
           </div>
         </div>
         <div class="xp-body">
-          <span class="badge">NEW!</span>
+          <div class="friend-space">Vincent Molenaar's Blurbs</div>
+          <br />
+          <div style="font-size: large; font-weight: bold">
+            Vincent Molenaar's Latest Blog Entry
+          </div>
+          <br />
 
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 10px;
+            "
+          >
+            <h2>24/10/2026 22:48</h2>
+            <span class="badge">NEW!</span>
+          </div>
           <application></application>
+          <br />
+          <br />
+          <br />
+          <div
+            style="font-size: medium; cursor: pointer"
+            class="prevent-select"
+          >
+            [
+            <span style="font-size: 15px; color: #0b3c91; font-weight: bold"
+              >View All Blog Entries</span
+            >
+            ]
+          </div>
         </div>
       </div>
 
       <!-- ============ Window: Music player ============ -->
       <div class="music-window">
-        <div class="profile-container">
-          <h1>Some of my favourite songs atm! :D</h1>
+        <div class="profile-container" style="margin-top: 0">
+          <h1>Nogle af mine yndlingssange atm! :D</h1>
         </div>
         <player
           @listening-status="listeningStatus = $event"
@@ -248,7 +277,7 @@
       </div>
 
       <!-- ============ Window: Photo Slidehow ============ -->
-      <div class="xp-window area-topright slideshow">
+      <div class="xp-window area-topright slideshow msn-blue">
         <div class="xp-titlebar">
           <span class="xp-title"> Photo Slidehow </span>
           <div class="xp-controls">

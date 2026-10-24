@@ -117,8 +117,6 @@ export default {
 /* Number text (1/3 etc) */
 .numbertext {
   font-size: 16px;
-  font-weight: bold;
-  -webkit-text-stroke: 1px white;
   padding: 8px 12px;
   position: absolute;
   top: 0;
