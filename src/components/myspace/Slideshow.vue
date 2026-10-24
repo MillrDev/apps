@@ -11,33 +11,39 @@
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">2 / 6</div>
+      <div class="numbertext">2 / 7</div>
       <img src="../../assets/myspace/malfoy.png" style="width: 100%" />
       <div class="text">Mig som Malfoy til halloween sidste år</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">3 / 6</div>
+      <div class="numbertext">3 / 7</div>
       <img src="../../assets/myspace/campus.JPEG" style="width: 100%" />
       <div class="text">GTA 6 tema til CampusCup 2026!!</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">4 / 6</div>
+      <div class="numbertext">4 / 7</div>
       <img src="../../assets/myspace/beer.JPEG" style="width: 100%" />
       <div class="text">Jeg har god stil</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">5 / 6</div>
+      <div class="numbertext">5 / 7</div>
       <img src="../../assets/myspace/halloween.png" style="width: 100%" />
       <div class="text">Klædt ud som Damon Salvatore (iykyk)</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">6 / 6</div>
+      <div class="numbertext">6 / 7</div>
       <img src="../../assets/myspace/vamp.JPEG" style="width: 100%" />
-      <div class="text">Gertrud lavede min vampyr makeup</div>
+      <div class="text">Gertrud lavede min vampyr makeup (67)</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 7</div>
+      <img src="../../assets/myspace/boulder.JPEG" style="width: 100%" />
+      <div class="text">Min første røde (and in the rentals too!)</div>
     </div>
   </div>
 </template>

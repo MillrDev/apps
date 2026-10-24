@@ -86,24 +86,24 @@
             style="margin: 0; border-radius: 3px 3px 3px 3px; border: 0px"
           >
             <div class="xp-body">
-              <div class="friend-space">Vincent Molenaar's Friend Space</div>
-              <br />
-              <div style="font-weight: bold">
-                Vincent Molenaar has
-                <span style="color: red">130</span> Friends.
-              </div>
-              <br />
               <ul class="xp-tabs prevent-select">
                 <li @click="switchTab(0)" :class="{ active: isActive(0) }">
-                  Top 8
+                  Friend Space
                 </li>
                 <li @click="switchTab(1)" :class="{ active: isActive(1) }">
                   Skills
                 </li>
               </ul>
-              <div class="xp-tabpanel">
+              <div class="xp-tabpanel" v-if="isActive(0)">
                 <!-- =========== top 8 friends tab ========= -->
-                <div class="top-8-grid" v-if="isActive(0)">
+                <div class="friend-space">Vincent Molenaar's Friend Space</div>
+                <br />
+                <div style="font-weight: bold">
+                  Vincent Molenaar has
+                  <span style="color: red">130</span> Friends.
+                </div>
+                <br />
+                <div class="top-8-grid">
                   <div class="friend-card">
                     <h2>Oliver Flinck</h2>
                     <img
@@ -189,18 +189,29 @@
                     />
                   </div>
                 </div>
-
-                <!-- =========== bullet points  tab ========= -->
-                <div v-else>
-                  <ul>
-                    <li>
-                      Bager sindssyge chocolate-chip, flaky salt, bløde indeni
-                      cookies
-                    </li>
-                    <li>Laver god mad!!!</li>
-                    <li>Kan lære dig latte-art ;)</li>
-                  </ul>
-                </div>
+              </div>
+              <!-- =========== bullet points  tab ========= -->
+              <div class="xp-tabpanel" v-else style="font-size: medium">
+                Nogle skills jeg besidder, som kommer andre til gode:
+                <ul>
+                  <li>
+                    Bager sindssyge chocolate-chip, flaky salt, bløde indeni
+                    cookies
+                  </li>
+                  <li>Laver god mad!!!</li>
+                  <li>Kan lære dig latte-art ;)</li>
+                  <li>
+                    Hygge-maxxer; jeg går op i hygge (fx romantisering af
+                    efteråret)
+                  </li>
+                </ul>
+                Fun facts about me:
+                <ul>
+                  <li>Jeg ELSKER at møde nye mennesker</li>
+                  <li>Jeg har 3 nipples 8)</li>
+                  <li>Jeg er obsessed med teen-dramas</li>
+                  <li>Jeg er altid klar på at være stang-chang (thai øl)</li>
+                </ul>
               </div>
             </div>
           </div>
