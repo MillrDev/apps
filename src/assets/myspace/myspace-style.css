@@ -1209,6 +1209,7 @@ hr {
 
 .profile-url {
   display: flex;
+  flex-direction: column;
   border: 1px solid white;
   background-color: rgba(255, 255, 255, 0.4);
   font-size: 14px;
@@ -1244,6 +1245,7 @@ hr {
 .friend-card > .avatar {
   width: 100px;
   height: 100px;
+  border: 3px solid blue;
   font-size: 36px;
 }
 

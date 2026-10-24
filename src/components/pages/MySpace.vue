@@ -75,7 +75,7 @@
           </div>
 
           <div class="profile-url">
-            MySpace URL:
+            MySpace URL: (tjek min hjemmeside ud, den er live!) ;)
             <br />
             https://millr.dev/apps/#/myspace
           </div>
@@ -210,6 +210,8 @@
         </div>
         <div class="xp-body">
           <span class="badge">NEW!</span>
+
+          <application></application>
         </div>
       </div>
 
@@ -372,6 +374,7 @@
 import "../emoticons.js";
 import Player from "/src/components/myspace/Player.vue";
 import Slideshow from "/src/components/myspace/Slideshow.vue";
+import Application from "/src/components/myspace/Application.vue";
 import freestyler from "../../assets/myspace/freestyler.mp3";
 import after from "../../assets/myspace/after.mp3";
 import ripples from "../../assets/myspace/ripples.mp3";
@@ -385,6 +388,7 @@ export default {
   components: {
     Player,
     Slideshow,
+    Application,
   },
 
   data() {
