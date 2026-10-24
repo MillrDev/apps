@@ -3,21 +3,47 @@
   <div class="slideshow-container">
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
+      <div class="numbertext">1 / 6</div>
       <img src="../../assets/myspace/beeriokart.png" style="width: 100%" />
-      <div class="text">Winner of ITU beeriokart fall 2026</div>
+      <div class="text">
+        Vinder af ITU beeriokart fall 2026 (mit støste flex)
+      </div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
+      <div class="numbertext">2 / 7</div>
       <img src="../../assets/myspace/malfoy.png" style="width: 100%" />
-      <div class="text">Me as Malfoy for halloween last year</div>
+      <div class="text">Mig som Malfoy til halloween sidste år</div>
     </div>
 
     <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="../../assets/myspace/olli.png" style="width: 100%" />
-      <div class="text">Caption Three</div>
+      <div class="numbertext">3 / 7</div>
+      <img src="../../assets/myspace/campus.JPEG" style="width: 100%" />
+      <div class="text">GTA 6 tema til CampusCup 2026!!</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 7</div>
+      <img src="../../assets/myspace/beer.JPEG" style="width: 100%" />
+      <div class="text">Jeg har god stil</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 7</div>
+      <img src="../../assets/myspace/halloween.png" style="width: 100%" />
+      <div class="text">Klædt ud som Damon Salvatore (iykyk)</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 7</div>
+      <img src="../../assets/myspace/vamp.JPEG" style="width: 100%" />
+      <div class="text">Gertrud lavede min vampyr makeup (67)</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 7</div>
+      <img src="../../assets/myspace/boulder.JPEG" style="width: 100%" />
+      <div class="text">Min første røde (and in the rentals too!)</div>
     </div>
   </div>
 </template>
@@ -91,8 +117,6 @@ export default {
 /* Number text (1/3 etc) */
 .numbertext {
   font-size: 16px;
-  font-weight: bold;
-  -webkit-text-stroke: 1px white;
   padding: 8px 12px;
   position: absolute;
   top: 0;
