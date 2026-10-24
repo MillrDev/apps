@@ -98,7 +98,7 @@
                   Top 8
                 </li>
                 <li @click="switchTab(1)" :class="{ active: isActive(1) }">
-                  Something
+                  Skills
                 </li>
               </ul>
               <div class="xp-tabpanel">
@@ -191,7 +191,16 @@
                 </div>
 
                 <!-- =========== bullet points  tab ========= -->
-                <div v-else>hej</div>
+                <div v-else>
+                  <ul>
+                    <li>
+                      Bager sindssyge chocolate-chip, flaky salt, bløde indeni
+                      cookies
+                    </li>
+                    <li>Laver god mad!!!</li>
+                    <li>Kan lære dig latte-art ;)</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
