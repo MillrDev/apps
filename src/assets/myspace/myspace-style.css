@@ -1315,6 +1315,17 @@ hr {
   overflow-y: auto;
 }
 
+.achievement-pic {
+  display: flex;
+}
+
+.achievement-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .divider {
   flex-grow: 1;
 }

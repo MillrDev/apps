@@ -47,16 +47,16 @@
     <br />
     <br />
 
-    Denne "MySpace-kopi" hjemmeside har jeg faktisk selv hånd-kodet til formålet
-    af min ansøgning, og i mellemtiden har jeg tænkt på, hvor fedt det kunne
-    være at lave en app til Tietgen, hvor kollegianerne kan chatte med hinanden
-    (så man fx undgår 12 forskellige messenger tråde). Og så begyndte idéerne
-    ellers bare at flow for mig: et beer-tracking system, event / bulletin
-    system, push-notifikationer når et køkken holder vennefest, en delt kalender
-    til fælles events osv. osv. Kommer jeg ind på Tietgen, vil jeg med sikkerhed
-    komme i gang med en første version - hvis sådan en app ikke allerede findes
-    :O. Ellers må jeg hive fat i dem der står for Tietgen Festival hjemmesiden -
-    jeg har nogle gode idéer til nogle improvements!
+    Denne MySpace-inspirerede hjemmeside har jeg faktisk selv hånd-kodet til
+    formålet af min ansøgning, og i mellemtiden har jeg tænkt på, hvor fedt det
+    kunne være at lave en app til Tietgen, hvor kollegianerne kan chatte med
+    hinanden (så man fx undgår 12 forskellige messenger tråde). Og så begyndte
+    idéerne ellers bare at flow for mig: et beer-tracking system, event /
+    bulletin system, push-notifikationer når et køkken holder vennefest, en delt
+    kalender til fælles events osv. osv. Kommer jeg ind på Tietgen, vil jeg med
+    sikkerhed komme i gang med en første version - hvis sådan en app ikke
+    allerede findes :O. Ellers må jeg hive fat i dem der står for Tietgen
+    Festival hjemmesiden - jeg har nogle gode idéer til nogle improvements!
     <br />
     <br />
 
