@@ -212,6 +212,23 @@
               </div>
             </div>
           </div>
+
+          <!-- ============ Window: latest achievement ============ -->
+          <div
+            class="xp-window"
+            style="margin: 0; border-radius: 3px 3px 3px 3px; border: 0px"
+          >
+            <div class="xp-body">
+              <!-- =========== top 8 friends tab ========= -->
+              <div class="friend-space">My Latest Achievement</div>
+              <br />
+              <h3>Jeg vandt beeriokart 2026 turnering på ITU!!!!</h3>
+              <div class="achievement-pic">
+                <img src="/src/assets/myspace/beeriokart.png" />
+                <div></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -245,7 +262,6 @@
             <span class="badge">NEW!</span>
           </div>
           <application></application>
-          <br />
           <br />
           <br />
           <div
