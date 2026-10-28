@@ -200,10 +200,7 @@
                   </li>
                   <li>Laver god mad!!!</li>
                   <li>Kan lære dig latte-art ;)</li>
-                  <li>
-                    Hygge-maxxer; jeg går op i hygge (fx romantisering af
-                    efteråret)
-                  </li>
+                  <li>Hygge-maxxer (fx romantisering af efteråret)</li>
                 </ul>
                 Fun facts about me:
                 <ul>
@@ -219,7 +216,7 @@
       </div>
 
       <!-- ============ Window: posts ============ -->
-      <div class="xp-window area-main">
+      <div class="xp-window area-main blurbs">
         <div class="xp-titlebar">
           <span class="xp-title">Vincent's Blurbs</span>
           <div class="xp-controls">

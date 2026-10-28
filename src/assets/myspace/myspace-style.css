@@ -1300,6 +1300,21 @@ hr {
   margin: 0 0 0.4em;
 }
 
+.xp-window.blurbs {
+  display: flex;
+  flex-direction: column;
+}
+
+.blurbs .xp-titlebar {
+  flex: none;
+}
+
+.blurbs .xp-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
 .divider {
   flex-grow: 1;
 }
